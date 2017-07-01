@@ -1,58 +1,134 @@
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: #E6ECF0;
+}
+form {
+  display: flex;
+  justify-content: space-between;
 }
 .inputTask {
   font-family: 'Roboto', sans-serif;
-  width: 70%;
+  width: 100%;
   padding: 2em;
   margin: auto;
-  background: black;
+  background: white;
   color: white;
-  box-shadow: 4px 4px 16px 0px rgba(199,199,199,1);
+}
+#appTitle {
+  background-color: white;
+  margin-bottom: 1px;
+  font-size: 26px;
+  padding: 1em;
 }
 #title {
-  width: 100%;
+  width: 65%;
   padding: 1em;
-  display: block;
-  margin: auto;
+  background-color: #e6ecf0;
   color: black;
   font-family: 'Roboto', sans-serif;
   outline: none;
   caret-color: #5664ff;
-}
-#notes {
-  width: 100%;
-  padding: 1em;
-  display: block;
-  margin: auto;
   border: none;
-  color: black;
-  font-family: 'Roboto', sans-serif;
-  outline: none;
-  /*box-shadow: 4px 4px 16px 0px rgba(100,100,100,1);*/
 }
+
 #submit {
-  width: 100%;
-  margin: auto;
-  margin-top: 10px;
-  color: black;
-  background-color: white;
+  width: 18%;
+  z-index: 40;
+  color: white;
+  background-color: #00cc14;
   border: none;
-  height: 40px;
   font-family: 'Roboto', sans-serif;
   outline: none;
-  /*box-shadow: 4px 4px 16px 0px rgba(100,100,100,1);*/
+  padding: 1em;
+  border-radius: 30px;
+  transition: all .4s;
+}
+#submit:hover{
+  cursor: pointer;
+  background-color: white;
+  color: #00cc14;
 }
 #preview {
   padding: 1em;
-  width: 70%;
+  width: 100%;
   margin: auto;
-  background-color: #5664ff;
+  margin-top: 1px;
+  background-color: white;
   color: black;
-  box-shadow: 4px 4px 16px 0px rgba(199,199,199,1);
 }
-#preview h2,p {
-  background-color: #4550d1;
-  color: white;
+#preview-content {
+  color: black;
   padding: 10px;
+  width: 100%;
+  height: 100%;
+  white-space: pre-line;
+}
+#preview-content {
+  font-size: 1.6em;
+}
+.tasks {
+  background-color: white;
+  padding: 10px;
+  width: 100%;
+  margin: auto;
+  margin-top: 1px;
+  color: black;
+}
+#tasksUl {
+  /*padding: .5em;*/
+  width: 100%;
+  margin: auto;
+  margin-top: 10px;
+  /*background-color: #42f477;
+  color: black;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  list-style: none;
+  color: white;*/
+}
+#tasks {
+  padding: .5em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  margin-top: 10px;
+  list-style: none;
+  color: black;
+  font-size: 1.5em;
+}
+#delete {
+  font-size: 14px;
+  text-align: center;
+  background-color: #f44253;
+  border: none;
+  outline: none;
+  padding: 10px;
+  color: white;
+  border-radius: 30px;
+  width: 20%;
+  height: 100%;
+}
+#delete:hover{
+  cursor: pointer;
+  background-color: white;
+  color: #f44253;
+  transition: all .4s;
+}
+
+@media only screen and (max-width: 450px) {
+  form {
+    flex-direction: column;
+  }
+  #submit {
+    border-radius: 0px;
+    width: 100%;
+    margin-top: 5px;
+  }
+  #delete {
+    border-radius: 0px;
+  }
+  #title {
+    width: 100%;
+  }
 }

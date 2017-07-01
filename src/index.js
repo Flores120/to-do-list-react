@@ -4,5 +4,7 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+var tasksList = [];
+
+ReactDOM.render(<App tasks={tasksList}/>, document.getElementById('root'));
 registerServiceWorker();
