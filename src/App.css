@@ -6,6 +6,10 @@ form {
   display: flex;
   justify-content: space-between;
 }
+/*.navbar {
+  background-color: black;
+  color: white;
+}*/
 .inputTask {
   font-family: 'Roboto', sans-serif;
   width: 100%;
